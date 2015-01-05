@@ -15,7 +15,7 @@ DensestSubgraph
    - the location of the input graph, which should be a txt file containing the edges of the graph, one edge per line. The nodes can be separated by a space bar or the tab key. 
    - the number of dense subgraph we want to extract. The default is 10.
    - the parameter alpha which sets the threshold for the overlapping of subgraphs.
-   - a parameter which can be 0,1,2 if we want to run NaiveGreedy(0), MinAndRemove(1) or the FastDSLO(2) algorithm. The default is MinAndRemove.
+   - a parameter which can be 0,1 or 2 if we want to run NaiveGreedy(0), MinAndRemove(1) or the FastDSLO(2) algorithm. The default is MinAndRemove.
  
 
 Example: 
