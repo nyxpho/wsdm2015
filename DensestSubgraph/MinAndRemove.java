@@ -28,7 +28,6 @@ public class MinAndRemove
         int k = 10;
         double alpha = 0.;
         int algo = 1;
-        double error = 1.;
         if(args != null && args.length <=4)
         {
             dataset = args[0];
@@ -56,12 +55,12 @@ public class MinAndRemove
             return;
         }
     
-        MinAndRemove(dataset, k, alpha, algo, error);
+        MinAndRemove(dataset, k, alpha, algo);
         
     }
     
 
-    public static void MinAndRemove(String dataset, int k, double alpha, int algo, double error) throws IOException
+    public static void MinAndRemove(String dataset, int k, double alpha, int algo) throws IOException
     {
         RealNetwork g = new RealNetwork(dataset);
         int initialN = g.n;
