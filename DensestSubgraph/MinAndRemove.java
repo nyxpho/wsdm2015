@@ -87,7 +87,7 @@ public class MinAndRemove
 	                subgraph = LPAlgorithms.basicLP(subgraph);
 	                subgraph = LPAlgorithms.makeMinimal(subgraph);
                         current = subgraph.listNodes();
-	                //current.printTopINodes(dataset+alpha, i); 
+	                 
 	            }
                     else
 			{
@@ -95,7 +95,9 @@ public class MinAndRemove
                                 
 			}
 	            int n = current.size();
-	            
+	            g.printTopINodesSubgraph(dataset+"alph"+ alpha + "alg" + algo, i, current, false);
+
+
 			
 			    
 	 	    double m = removeWeakConnections(g, current, alpha);
