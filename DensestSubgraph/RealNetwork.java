@@ -174,6 +174,26 @@ public class RealNetwork {
                 bw.flush();
                 bw.close();
             }
+            
+public void printTopINodesSubgraph(String output, int i, Set<Integer> subgr, boolean induced) throws IOException
+            {
+                if(induced)
+                  {
+                     RealNetwork inducedSubgr = inducedSubgraph(subgr);
+                     inducedSubgr.printTopI(output, i, false);
+                  }
+                else
+                {
+                        BufferedWriter bw = new BufferedWriter(new FileWriter(output+"_Top"+i+".txt"));
+                        for(int u:subgr)
+                        {
+                                bw.write(""+u);
+                                bw.newLine();
+                        }
+                        bw.flush();
+                        bw.close();
+                }
+            }
 
 
     public Set<Integer> listNodes()
