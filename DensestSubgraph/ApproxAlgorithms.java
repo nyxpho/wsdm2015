@@ -9,6 +9,9 @@ import java.util.ListIterator;
 
 public class ApproxAlgorithms {
 
+
+	/* this function returns the subgraph after the filtering 
+	of the nodes with degree smaller than the 2 approx density */
 	 public static Set filtering(RealNetwork g)
         {
 	 Map<Integer, Map<Integer, Double>> matrix = g.cloneGraph();
@@ -160,6 +163,8 @@ public class ApproxAlgorithms {
 	        return s;
 	    }
 	  
+	  
+	  /* this function returns the subgraph computed using the Charikar 2 approx algorithm */
 	 public static Set approxChar(RealNetwork g)
      {
 	 Map<Integer, Map<Integer, Double>> matrix = g.cloneGraph();
